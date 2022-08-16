@@ -1,14 +1,13 @@
 package article_code.model;
 
-public class Motorcycle extends Vehicle{
-    
+public class Motorcycle extends Vehicle {
+
     private String type, brand, model, color;
     private int year;
     private String engineType;
     private double additionForMotoSale = 1.2;
-    
-    
-    public Motorcycle(String type, String brand, String model){
+
+    public Motorcycle(String type, String brand, String model) {
         super(type, brand, model);
     }
 
@@ -35,19 +34,19 @@ public class Motorcycle extends Vehicle{
     public void setColor(String color) {
         this.color = color;
     }
-    
+
     @Override
-    public double additionForSale(){
+    public double additionForSale() {
         return this.additionForMotoSale;
     }
-      
+
     @Override
     public String vehicleData() {
-        return super.vehicleData()+"\nCor: "+this.color+"\nAno: "+this.year+"\nMotor: "+this.engineType;       
+        return super.vehicleData() + "\nCor: " + this.color + "\nAno: " + this.year + "\nMotor: " + this.engineType;
     }
 
     @Override
     public String vehicleValue() {
-          return "Valor venda da moto: "+"R$"+(super.getValue()*additionForMotoSale);
+        return "Valor venda da moto: " + "R$" + (super.getValue() * additionForMotoSale);
     }
 }
